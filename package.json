@@ -1,0 +1,25 @@
+{
+  "name": "the-social-network-api",
+  "version": "1.0.0",
+  "description": "A Social Network where Users can have friends and make post called \"Thoughts\". Users can leave \"Reactions\" on friends \"Thoughts\".",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BCannon88/The-Social-Network-API.git"
+  },
+  "author": "Baron Cannon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BCannon88/The-Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/BCannon88/The-Social-Network-API#readme"
+}
