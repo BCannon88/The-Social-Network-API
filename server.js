@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -16,6 +17,13 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/The-Social-Netw
 
 // Use this to log mongo queries being executed!
 mongoose.set('debug', true);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useUnifiedTopology', true);
+
+
+
 
 app.use(require('./routes'));
 
