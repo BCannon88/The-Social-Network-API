@@ -57,7 +57,7 @@ const thoughtController = {
             .catch(err => res.json(err));
     },
     deleteThought({ params }, res) {
-        Thought.findByIdAndDelete(params.thoughtId)
+        Thought.findOneAndDelete(params.thoughtId)
             .then(thoughtData => {
                 if (!thoughtData) {
                     res.status(404).json({ message: 'no thought with this id' });
@@ -81,7 +81,7 @@ const thoughtController = {
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
-            { $push: { reaction: body } },
+            { $push: { reactions: body } },
             { new: true, runValidators: true }
         )
             .then(dbThoughtData => {
@@ -96,12 +96,12 @@ const thoughtController = {
     deleteOneReaction({ params }, res) {
         Thought.findOneAndUpdate(
             { _id: params.thoughtId },
-            { $pull: { reaction: { reactionId: params.reactionId } } },
-            { new: true, runValidators }
+            { $pull: { reactions: { reactionId: params.reactionId } } },
+            { new: true, runValidators: true }
         )
             .then(dbUserData => res.json(dbUserData))
             .catch(err => res.json(err));
     }
-}
+};
 
 module.exports = thoughtController;
