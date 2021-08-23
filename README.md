@@ -8,7 +8,7 @@
   ## A social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. THis is a tutorial of how those routes would work.
 
   ## Table of Contents  
-   * [Walkthrough-Video-Links] (#Walkthrough-Video-Links)     
+   * [Walkthrough-Video-Links](#Walkthrough-Video-Links)     
    * [Installation](#Installation)
    * [Usage](#Usage)       
    * [Credits](#Credits)       
